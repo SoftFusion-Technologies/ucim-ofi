@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.font-work-sans-italic {
+    font-family: 'Work Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+  }
