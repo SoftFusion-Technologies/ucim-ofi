@@ -1,7 +1,175 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 .font-work-sans-italic {
-    font-family: 'Work Sans', sans-serif;
-    font-style: italic;
-    font-weight: 400;
-  }
+  font-family: 'Work Sans', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Paleta UCIM */
+:root {
+  --color-ucim-dark-blue: #42438e;
+  --color-ucim-light-gray: #ebe7ee;
+  --color-ucim-red: #f10809;
+  --color-ucim-black: #060505;
+  --color-ucim-purple-dark: #8d83a7;
+  --color-ucim-purple-light: #a2a5bd;
+  --color-ucim-red-light: #de6565;
+  --color-ucim-gray-blue: #727598;
+  --font-family-base: 'Montserrat', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-black-italic: 900;
+}
+
+.titulo {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-black-italic);
+  font-style: italic;
+}
+
+.cuerpo {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+}
+
+/* Texto */
+.text-ucim-dark-blue {
+  color: var(--color-ucim-dark-blue);
+}
+
+.text-ucim-light-gray {
+  color: var(--color-ucim-light-gray);
+}
+
+.text-ucim-red {
+  color: var(--color-ucim-red);
+}
+
+.text-ucim-black {
+  color: var(--color-ucim-black);
+}
+
+.text-ucim-purple-dark {
+  color: var(--color-ucim-purple-dark);
+}
+
+.text-ucim-purple-light {
+  color: var(--color-ucim-purple-light);
+}
+
+.text-ucim-red-light {
+  color: var(--color-ucim-red-light);
+}
+
+.text-ucim-gray-blue {
+  color: var(--color-ucim-gray-blue);
+}
+
+/* Fondos */
+.bg-ucim-dark-blue {
+  background-color: var(--color-ucim-dark-blue);
+}
+
+.bg-ucim-light-gray {
+  background-color: var(--color-ucim-light-gray);
+}
+
+.bg-ucim-red {
+  background-color: var(--color-ucim-red);
+}
+
+.bg-ucim-black {
+  background-color: var(--color-ucim-black);
+}
+
+.bg-ucim-purple-dark {
+  background-color: var(--color-ucim-purple-dark);
+}
+
+.bg-ucim-purple-light {
+  background-color: var(--color-ucim-purple-light);
+}
+
+.bg-ucim-red-light {
+  background-color: var(--color-ucim-red-light);
+}
+
+.bg-ucim-gray-blue {
+  background-color: var(--color-ucim-gray-blue);
+}
+
+/* Bordes */
+.border-ucim-dark-blue {
+  border: 2px solid var(--color-ucim-dark-blue);
+}
+
+.border-ucim-light-gray {
+  border: 2px solid var(--color-ucim-light-gray);
+}
+
+.border-ucim-red {
+  border: 2px solid var(--color-ucim-red);
+}
+
+.border-ucim-black {
+  border: 2px solid var(--color-ucim-black);
+}
+
+.border-ucim-purple-dark {
+  border: 2px solid var(--color-ucim-purple-dark);
+}
+
+.border-ucim-purple-light {
+  border: 2px solid var(--color-ucim-purple-light);
+}
+
+.border-ucim-red-light {
+  border: 2px solid var(--color-ucim-red-light);
+}
+
+.border-ucim-gray-blue {
+  border: 2px solid var(--color-ucim-gray-blue);
+}
+
+/* Sombras */
+.shadow-ucim-dark-blue {
+  box-shadow: 0 0 8px var(--color-ucim-dark-blue);
+}
+
+.shadow-ucim-red {
+  box-shadow: 0 0 8px var(--color-ucim-red);
+}
+
+.shadow-ucim-purple-dark {
+  box-shadow: 0 0 8px var(--color-ucim-purple-dark);
+}
+
+/* Ejemplos de gradientes */
+.bg-gradient-ucim-blue-purple {
+  background: linear-gradient(
+    135deg,
+    var(--color-ucim-dark-blue),
+    var(--color-ucim-purple-dark)
+  );
+}
+
+.bg-gradient-ucim-red-dark {
+  background: linear-gradient(
+    135deg,
+    var(--color-ucim-red),
+    var(--color-ucim-red-light)
+  );
+}
+
+/* Utilidades extras */
+.text-shadow-ucim-dark {
+  text-shadow: 0 1px 3px rgba(66, 67, 142, 0.7);
+}
+
+.text-shadow-ucim-red {
+  text-shadow: 0 1px 3px rgba(241, 8, 9, 0.7);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -75,7 +75,7 @@ export default function Navbar() {
               {/* Logo */}
               <Link
                 to="/"
-                className="text-blue-800 font-work-sans italic font-semibold text-xl tracking-wide hover:text-blue-900 transition"
+                className="text-ucim-dark-blue font-work-sans-italic font-semibold text-xl tracking-wide hover:text-blue-900 transition"
               >
                 UCIM
               </Link>
