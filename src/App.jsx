@@ -18,7 +18,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Aquí podés agregar más rutas luego */}
       </Routes>
       <Footer />
     </>
