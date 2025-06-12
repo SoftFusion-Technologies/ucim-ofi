@@ -6,6 +6,7 @@ import {
   Cog6ToothIcon,
   SparklesIcon
 } from '@heroicons/react/24/outline';
+import bgHero from '../../Images/Hero/bgHero.svg';
 
 const icons = [
   { Icon: BuildingOffice2Icon, label: 'Industria' },
@@ -39,14 +40,23 @@ export default function Hero() {
       transition: { duration: 0.6, ease: 'easeOut' }
     }
   };
-
   return (
     <section
-      className="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 text-center relative bg-gradient-to-tr from-blue-50 via-white to-blue-100 overflow-hidden"
+      className="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 text-center relative overflow-hidden"
       aria-label="Unión Comercial e Industrial de Monteros - Hero Section"
     >
+      {/* Fondo Hero SVG visible con menos opacidad del fondo blanco */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={bgHero}
+          alt="Fondo Hero"
+          className="w-full h-full object-cover opacity-90 mix-blend-multiply"
+        />
+      </div>
+
+      {/* Contenido principal */}
       <motion.h1
-        className="titulo text-3xl md:text-5xl font-semibold uppercase mb-4 font-work-sans-italic text-blue-800 drop-shadow-lg"
+        className="titulo text-3xl md:text-5xl font-semibold uppercase mb-4 font-work-sans-italic text-blue-800 drop-shadow-lg z-10 text-outline-white"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -55,7 +65,7 @@ export default function Hero() {
       </motion.h1>
 
       <motion.p
-        className="font-work-sans-italic max-w-xl text-gray-700 text-lg mb-10 drop-shadow"
+        className="font-work-sans-italic max-w-xl text-gray-300 text-lg mb-10 drop-shadow z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 1 }}
@@ -82,14 +92,14 @@ export default function Hero() {
             transition={{ type: 'spring', stiffness: 300 }}
           >
             <Icon className="w-20 h-20 text-blue-600 drop-shadow-md" />
-            <span className="font-medium text-gray-700 text-lg">{label}</span>
+            <span className="font-medium text-gray-200 text-lg">{label}</span>
           </motion.div>
         ))}
       </motion.div>
 
       <motion.a
         href="#about"
-        className="mt-16 inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-neon transition-colors duration-300 drop-shadow-lg"
+        className="mt-16 inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-neon transition-colors duration-300 drop-shadow-lg z-10"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 2, duration: 0.6 }}
@@ -101,6 +111,10 @@ export default function Hero() {
       <style jsx>{`
         .shadow-neon {
           box-shadow: 0 0 8px #3b82f6;
+        }
+        .text-outline-white {
+          text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+            1px 1px 0 white;
         }
       `}</style>
     </section>
